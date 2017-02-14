@@ -1,0 +1,7 @@
+.git
+.vagrant
+build/
+dist/
+django_watchman.egg-info/
+docs/
+provisioning/
