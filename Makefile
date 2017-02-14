@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build docs
+.PHONY: clean clean-build clean-pyc lint test test-all coverage docs release dist
 
 help:
 	@echo "clean-build - remove build artifacts"
@@ -55,3 +55,6 @@ dist: clean lint test
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
+
+docker-build:
+	docker build --tag django-watchman .
